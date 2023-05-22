@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MTIT Project</title>
+    <meta name="description" content="MTIT AR">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+</head>
+<body style='margin : 0px; overflow: hidden;'>
+  <a-scene embedded arjs="debugUIEnabled: false;">
+    <a-assets>
+      <a-asset-item id="obj-model" src="model.obj"></a-asset-item>
+      <a-asset-item id="mtl-model" src="model.mtl"></a-asset-item>
+    </a-assets>
+    <a-marker-camera preset='hiro'></a-marker-camera>
+    <a-entity
+      obj-model="obj: #obj-model; mtl: #mtl-model" position="0 0 0" rotation="0 0 0" scale="0.03 0.03 0.03"  
+    ></a-entity>
+  </a-scene>
+</body>
+</html>
